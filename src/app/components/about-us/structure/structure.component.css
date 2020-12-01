@@ -1,0 +1,20 @@
+.aboutus {
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif0;
+    text-align: center;
+    margin-top: 40px;
+}
+.box {
+    text-align:left;
+    margin-left:60px;
+    padding-top: 20;
+    /* background-color: aqua; */
+
+}
+
+.FirstPic {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 200px;
+
+}

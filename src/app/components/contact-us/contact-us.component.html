@@ -1,0 +1,214 @@
+<div class="contactus">
+  <h1>ติดต่อเรา</h1>
+  <h4 style="color: black;">ฝ่ายการเงิน (กง.)</h4>
+  <hr width="80%" />
+</div>
+<br />
+<br />
+
+<section class="contact-section">
+  <div class="container" style="padding-left: 15%; padding-right: 15%;">
+    <div class="row">
+      <div
+        class="col-lg-8"
+        style="padding-left: 10%;"
+      >
+        <div class="col-12">
+          <p class="contact-title" style="text-align: left; font-size: 20px;">
+            ฝ่ายการเงิน กง.
+          </p>
+        </div>
+        <div class="form-contact contact_form">
+          <!-- action="contact_process.php"
+              method="post"
+              id="contactForm"
+              novalidate="novalidate" -->
+          <div class="row">
+            <div class="col-12" >
+              <div class="form-group">
+                <ul style="list-style: none;">
+                  <li *ngFor="let item of headerList">
+                    <div class="row">
+                      <div class="col-sm-3" >
+
+                        <span class="contact-info__icon"
+                          ><i class="far fa-file-alt"></i
+                        ></span>
+                        <!-- <div style="height: 50%;">  -->
+
+                        <!-- <img class="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+                        data-holder-rendered="true"> -->
+                        
+                      <!-- </div> -->
+
+                      </div>
+                      <div
+                        class="col-md-7"
+                        style=" margin-left: 5%; "
+                      >
+                        <a
+                          class="contact-title"
+                          style="
+                            text-align: center;
+                            font-size: 15px;
+                            text-decoration: none;
+                          "
+                        >
+                          <!-- routerLink="/contact-us" -->
+                          <span>
+                            {{ item.sectorName }}<br />
+                            {{ item.name }}<br />
+                            {{ item.phoneNo }}<br />
+                            {{ item.mail }}<br />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- <div
+                        style="
+                          height: 30%;
+                          width: 30%;
+                          background-color: black;
+                          opacity: 40%;
+                          /* margin-top: 4.1%; */
+                          /* padding-top: %; */
+                          margin-left: 10%;
+                        "
+                      ></div> -->
+                    <br />
+                    <br />
+
+                    <!-- binding ใส่ service topic  -->
+                    <!-- {{regu.topic}} | {{regu.sub}} -->
+                    <!-- {{item}} -->
+                  </li>
+                </ul>
+                <!-- <img
+                      src="../../../assets/img/investment_news.png"
+                      alt=""
+                      style="height: 50%; width: 100%;"
+                    /> -->
+              </div>
+            </div>
+            <!-- <div class="col-sm-6"> -->
+            <!-- <div style="flex: 0 0 100%; margin: 3%; max-width: 95%;">
+                <div class="form-group" style="background-color: burlywood;">
+                  <span>เนื้อหา</span>
+                </div>
+              </div> -->
+            <!-- <div class="col-12">
+              <nav style="text-align: center;">
+                <ul id="navigation" style="margin-bottom: 0px;">
+                  <li>
+                    <a
+                      class="contact-title"
+                      style="
+                        text-align: center;
+                        font-size: 15px;
+                        text-decoration: none;
+                      "
+                      routerLink="/regulation/order"
+                    >
+                      | เพิ่มเติม |</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div> -->
+          </div>
+
+          <!-- <div class="form-group mt-3">
+                <button type="submit" class="button button-contactForm boxed-btn">
+                  Send
+                </button>
+              </div> -->
+        </div>
+      </div>
+      <!-- เส้นแบ่ง ระหว่าง content กับ ข่าวล่าสุด -->
+      <div
+        style="margin-top: 5%; margin-left: 2%; margin-right: 2%; width: 1%;"
+      >
+        <div
+          style="height: 80%; width: 3%; background-color: black; opacity: 40%;"
+        ></div>
+      </div>
+      <!-- ข่าวล่าสุด ใส่ api -->
+      <div class="col-lg-3 offset-lg-1" style="margin-left: 1%;">
+        <p
+          class="contact-title"
+          style="text-align: center; font-size: 20px; margin-bottom: 10px;"
+        >
+          ส่วนงาน
+        </p>
+        <!-- แก้ contact-info ใน style.css จาก 25px -> 5px  และ เพิ่ม width จากที่ไม่ได้กำหนด -> 110% -->
+        <div class="media contact-info">
+          <!-- <span class="contact-info__icon"><i class="ti-home"></i></span> -->
+          <span class="HOT">HOT</span>
+          <div class="media-body" style="height: 2%; margin-left: 25%;">
+            <h3>ส่วนงาน1</h3>
+            <p style="margin-bottom: 0%;">Rosemead, CA 91770</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="HOT">HOT</span>
+          <!-- <span class="contact-info__icon"><i class="ti-tablet"></i></span> -->
+          <div class="media-body" style="height: 2%; margin-left: 25%;">
+            <h3>ส่วนงาน2</h3>
+            <p style="margin-bottom: 0%;">Mon to Fri 9am to 6pm</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <!-- <span class="contact-info__icon"><i class="ti-email"></i></span> -->
+          <span class="HOT">HOT</span>
+          <!-- <span class="HOT"></span> -->
+          <div class="media-body" style="height: 2%; margin-left: 25%;">
+            <h3>ส่วนงาน3</h3>
+            <p style="margin-bottom: 0%;">Send us your query anytime!</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <!-- <span class="contact-info__icon"><i class="ti-email"></i></span> -->
+          <span class="HOT">HOT</span>
+          <div class="media-body" style="height: 2%; margin-left: 25%;">
+            <h3>ส่วนงาน4</h3>
+            <p style="margin-bottom: 0%;">Send us your query anytime!</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <!-- <span class="contact-info__icon"><i class="ti-email"></i></span> -->
+          <span class="HOT">HOT</span>
+          <!-- <p class="hot"></p> -->
+          <div class="media-body" style="height: 2%; margin-left: 25%;">
+            <h3>ส่วนงาน5</h3>
+            <p style="margin-bottom: 0%;">Send us your query anytime!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-12" style="background-color: darksalmon;">
+      <div class="col-sm-8"
+        style="
+          height: 2%;
+          width: 50%;
+          background-color: black;
+          opacity: 40%;
+          margin-top: 4.1%;
+          /* padding-top: %; */
+          margin-left: 13%;
+        "
+      ></div>
+    </div>
+  </div> -->
+  <!-- <div class="container" style="padding-left: 15%; padding-right: 15%;">
+    <div class="row">
+      <div
+        class="col-lg-8"
+        style=" padding-left: 19%;"
+      >
+      <hr width="105%" style="opacity: 40%; background-color: black;" />
+      </div>
+    </div>
+  </div> -->
+</section>
