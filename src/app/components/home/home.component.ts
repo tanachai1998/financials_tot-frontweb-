@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   displayData:any=[];
   loanData: any;
   showData: any = [];
+  newsData1: any = [];
   constructor(private router: Router,
     private loanbankservice: LoanBankAPIService,
     private newsservice: NewsAPIserviceService,
@@ -54,10 +55,17 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.ServiceSlideApi = this.slideApi.imageObject;
     this.getloan();
-
+    this.getNews1();
     this.getNews();
   }
-
+  getNews1(){
+    alert("DDD");
+    this.newsservice.getNews1(1).subscribe(result => {
+      //  for(var i=0 ; i< this.newsdata)
+      this.newsData1 = result
+      console.log("new1", this.newsData1)      
+    })
+  }
   getNews() {
     this.newsservice.getNews().subscribe(newsdetail => {
       //  for(var i=0 ; i< this.newsdata)
@@ -67,6 +75,8 @@ export class HomeComponent implements OnInit {
 
        this.displayData.push({title: this.newsData[a].title, description:this.newsData[a].description, url:this.newsData[a].url, urlToImage:this.newsData[a].urlToImage })
       }
+
+
 
 
       // console.log("articles", this.newsData.articles)

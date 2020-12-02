@@ -13,4 +13,9 @@ getNews(){
   return this.http.get<any>("http://newsapi.org/v2/top-headlines?country=th&category=business&apiKey=71fbc02a06024c76a6656c83c37a8c0d")
 
 }
+
+getNews1(sector_id){
+  alert("55555");
+  return this.http.get<any>('http://localhost/TOTFinancial/public/api/getNews/'+ sector_id);
+}
 }
