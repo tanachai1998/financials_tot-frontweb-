@@ -50,7 +50,7 @@ export class ContactUsComponent implements OnInit {
     },
   ];
   news(){
-    this.newsservice.getNews1().subscribe(result => {
+    this.newsservice.getNews1(1).subscribe(result => {
       this.resultnews = result
       console.log("'''",this.resultnews);
       
