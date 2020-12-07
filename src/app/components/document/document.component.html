@@ -1,0 +1,107 @@
+<div class="topic">
+  <h1>คำสั่ง / ระเบียบ</h1>
+  <h4 style="color: black;">คำสั่ง ระเบียบ ที่เกี่ยวข้อง</h4>
+  <hr width="80%" />
+</div>
+
+<section class="contact-section">
+  <div class="container" style="padding-left: 15%; padding-right: 15%;">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="col-12">
+          <p class="contact-title" style="text-align: left; font-size: 20px;">
+            เอกสาร
+          </p>
+        </div>
+        <div class="form-contact contact_form">
+          <!-- action="contact_process.php"
+              method="post"
+              id="contactForm"
+              novalidate="novalidate" -->
+
+          <!-- <div>
+  <h1>peach {{list}}</h1>
+              </div> -->
+          <div class="card-body">
+            <table id="datatables-basic" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>หัวข้อ</th>
+                  <th>รายละเอียด</th>
+                  <th>ไฟล์</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of resultFile ; let i = index ">
+                  <td>{{ i + 1 }}</td>
+                  <td class="pointer">{{ item.topic }}</td>
+                  <td class="pointer">{{ item.subTopic }}</td>
+                  <td>
+                    <div *ngFor="let itemfiles of item.files ; let ii = index ">
+                    <a href="http://localhost/TOTFinancial/public/api/getFile/ {{itemfiles.file}}" download>
+                      {{itemfiles.file_name}}
+                    </a>
+                    </div>
+                  </td>
+                </tr>
+                <!-- <div
+                        style="
+                          height: 30%;
+                          width: 30%;
+                          background-color: black;
+                          opacity: 40%;
+                          /* margin-top: 4.1%; */
+                          /* padding-top: %; */
+                          margin-left: 10%;
+                        "
+                      ></div> -->
+                <br />
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- binding ใส่ service topic  -->
+<!-- {{regu.topic}} | {{regu.sub}} -->
+<!-- {{item}} -->
+
+<!-- <img
+                      src="../../../assets/img/investment_news.png"
+                      alt=""
+                      style="height: 50%; width: 100%;"
+                    /> -->
+<!-- <div class="col-sm-6"> -->
+<!-- <div style="flex: 0 0 100%; margin: 3%; max-width: 95%;">
+                <div class="form-group" style="background-color: burlywood;">
+                  <span>เนื้อหา</span>
+                </div>
+              </div> -->
+<div class="col-12">
+  <nav style="text-align: center;">
+    <ul id="navigation" style="margin-bottom: 0px;">
+      <li>
+        <a class="contact-title" style="
+                          text-align: center;
+                          font-size: 15px;
+                          text-decoration: none;
+                        " routerLink="/regulation/order">
+          | เพิ่มเติม |</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<br />
+<br />
+
+<!-- <div class="form-group mt-3">
+                <button type="submit" class="button button-contactForm boxed-btn">
+                  Send
+                </button>
+              </div> -->
+
+<!-- เส้นแบ่ง ระหว่าง content กับ ข่าวล่าสุด -->
