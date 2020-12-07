@@ -16,4 +16,12 @@ getNews1(){
   return this.http.get<any>('http://localhost:8080/TOTFinancial/public/api/getNews/1');
 
 }
+
+getNews1(sector_id){
+  return this.http.get<any>('http://localhost/TOTFinancial/public/api/getNews/'+ sector_id);
+}
+getNewInfo(news_id){
+  return this.http.get<any>('http://localhost/TOTFinancial/public/api/getNewsInfo/'+ news_id);
+}
+
 }
