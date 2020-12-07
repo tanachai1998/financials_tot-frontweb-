@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import {
   NgbCarousel,
   NgbSlideEvent,
@@ -17,14 +17,18 @@ import { NewsAPIserviceService } from 'src/app/services/news-apiservice.service'
 export class HomeComponent implements OnInit {
 
   newsData: any;
-  displayData:any=[];
+  displayData: any = [];
   loanData: any;
   showData: any = [];
   newsData1: any = [];
+  url = "";
   constructor(private router: Router,
     private loanbankservice: LoanBankAPIService,
     private newsservice: NewsAPIserviceService,
-  ) { }
+    // @Inject('BASE_URL') baseUrl: string
+  ) {
+    this.url = "http://localhost:4200/";
+  }
   a: number;
   i: number;
   q: number = 0;
@@ -34,21 +38,21 @@ export class HomeComponent implements OnInit {
     {
       pic: '../../../assets/img/bangkok-icon.png',
       // pic: "../../../assets/img/bangkok-icon.png",
-      picName:'กรุงเทพ',
-    },{
+      picName: 'กรุงเทพ',
+    }, {
       pic: '../../../assets/img/ktb-icon.png',
-      picName:'กรุงไทย',
-    },{
+      picName: 'กรุงไทย',
+    }, {
       pic: '../../../assets/img/kbank-icon.png',
-      picName:'กสิกรไทย',
+      picName: 'กสิกรไทย',
     },
     {
       pic: '../../../assets/img/scb-icon.png',
-      picName:'ไทยพาณิชย์',
-    
-    },{
+      picName: 'ไทยพาณิชย์',
+
+    }, {
       pic: '../../../assets/img/krungsri-icon.png',
-      picName:'กรุงศรีอยุธยา',
+      picName: 'กรุงศรีอยุธยา',
     }
   ];
   ServiceSlideApi: Array<Object> = [];
@@ -58,12 +62,11 @@ export class HomeComponent implements OnInit {
     this.getNews1();
     this.getNews();
   }
-  getNews1(){
-    alert("DDD");
+  getNews1() {
     this.newsservice.getNews1(1).subscribe(result => {
       //  for(var i=0 ; i< this.newsdata)
       this.newsData1 = result
-      console.log("new1", this.newsData1)      
+      console.log("new1", this.newsData1)
     })
   }
   getNews() {
@@ -73,7 +76,7 @@ export class HomeComponent implements OnInit {
       console.log("newsdetail", this.newsData)
       for (var a = 0; a < 5; a++) {
 
-       this.displayData.push({title: this.newsData[a].title, description:this.newsData[a].description, url:this.newsData[a].url, urlToImage:this.newsData[a].urlToImage })
+        this.displayData.push({ title: this.newsData[a].title, description: this.newsData[a].description, url: this.newsData[a].url, urlToImage: this.newsData[a].urlToImage })
       }
 
 
@@ -81,7 +84,7 @@ export class HomeComponent implements OnInit {
 
       // console.log("articles", this.newsData.articles)
       //  this. = results.result.data
-      console.log("news" , this.displayData)
+      console.log("news", this.displayData)
     })
   }
   getloan() {
@@ -93,22 +96,21 @@ export class HomeComponent implements OnInit {
       // var q = 0;
       for (var i = 0; i < this.loanData.data_detail.length; i++) {
         if (this.loanData.data_detail[i].bank_name_th == "กรุงเทพ" || this.loanData.data_detail[i].bank_name_th == "กรุงไทย" ||
-          this.loanData.data_detail[i].bank_name_th == "กสิกรไทย" || this.loanData.data_detail[i].bank_name_th == "ไทยพาณิชย์" || this.loanData.data_detail[i].bank_name_th == "กรุงศรีอยุธยา") 
-          {
+          this.loanData.data_detail[i].bank_name_th == "กสิกรไทย" || this.loanData.data_detail[i].bank_name_th == "ไทยพาณิชย์" || this.loanData.data_detail[i].bank_name_th == "กรุงศรีอยุธยา") {
 
-            // this.showData.push({ name: this.loanData.data_detail[i].bank_name_th, mor: this.loanData.data_detail[i].mor, mlr: this.loanData.data_detail[i].mlr, mrr: this.loanData.data_detail[i].mrr})
-            // console.log('------------api--------',this.showData);
-            // console.log('------------obj--------',this.imageObject.length);
-            this.q++;
-            console.log('q == ',this.q);
-             
+          // this.showData.push({ name: this.loanData.data_detail[i].bank_name_th, mor: this.loanData.data_detail[i].mor, mlr: this.loanData.data_detail[i].mlr, mrr: this.loanData.data_detail[i].mrr})
+          // console.log('------------api--------',this.showData);
+          // console.log('------------obj--------',this.imageObject.length);
+          this.q++;
+          console.log('q == ', this.q);
+
           for (var j = 0; j < this.imageObject.length; j++) {
-            if(this.imageObject[j].picName == this.loanData.data_detail[i].bank_name_th ){
+            if (this.imageObject[j].picName == this.loanData.data_detail[i].bank_name_th) {
               // console.log('-----------picture--------',this.imageObject[j].picName,'j =', j);
-              
+
               // this.showData.push({ picName: this.imageObject[j].pic})
-            this.showData.push({ name: this.loanData.data_detail[i].bank_name_th, mor: this.loanData.data_detail[i].mor, mlr: this.loanData.data_detail[i].mlr, mrr: this.loanData.data_detail[i].mrr,picName: this.imageObject[j].pic})
-              
+              this.showData.push({ name: this.loanData.data_detail[i].bank_name_th, mor: this.loanData.data_detail[i].mor, mlr: this.loanData.data_detail[i].mlr, mrr: this.loanData.data_detail[i].mrr, picName: this.imageObject[j].pic })
+
               // console.log('------------Pic--------',this.imageObject[j].pic);
               // console.log('--showdata--Pic--------',this.showData.picName);
 
@@ -117,9 +119,9 @@ export class HomeComponent implements OnInit {
             // console.log('------------api--------',this.showData);
 
 
-          //  console.log("loan" , this.loanData.data_detail[i].ceiling_rate)
+            //  console.log("loan" , this.loanData.data_detail[i].ceiling_rate)
           }
-          console.log('------------api--------',this.showData);
+          console.log('------------api--------', this.showData);
 
 
         }
@@ -206,10 +208,14 @@ export class HomeComponent implements OnInit {
     console.log(goTolink);
     this.router.navigate([goTolink]);
   }
-  goto(value){
+  goto(value) {
     // console.log('value', value);
-    
+
     window.open(value);
+  }
+  gotonewdata(value) {
+    window.open(this.url + 'newdata/' + value);
+    // window.location.href = this.url + 'newdata/' + value;
   }
 
   // return this.link;

@@ -15,7 +15,10 @@ getNews(){
 }
 
 getNews1(sector_id){
-  alert("55555");
   return this.http.get<any>('http://localhost/TOTFinancial/public/api/getNews/'+ sector_id);
 }
+getNewInfo(news_id){
+  return this.http.get<any>('http://localhost/TOTFinancial/public/api/getNewsInfo/'+ news_id);
+}
+
 }
