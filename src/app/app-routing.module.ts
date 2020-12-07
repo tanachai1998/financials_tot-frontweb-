@@ -30,6 +30,8 @@ import { Infor31Component } from './components/sector/sector3/infor31/infor31.co
 import { Infor32Component } from './components/sector/sector3/infor32/infor32.component';
 import { Infor33Component } from './components/sector/sector3/infor33/infor33.component';
 import { SupplierResolver } from './pipes/suppliers.resolver';
+import { DocumentComponent } from './components/document/document.component';
+import { CategoryComponent } from './components/category/category.component';
 const routes: Routes = [
   {
     path: '',
@@ -50,8 +52,16 @@ const routes: Routes = [
     component: SectorComponent,
   },
   {
-    path: 'regulation',
+    path: 'regulation/:id',
     component: RegulationComponent,
+  },
+  {
+    path: 'regulation/category/:id',
+    component: CategoryComponent,
+  },
+  {
+    path: 'regulation/category/document/:id',
+    component: DocumentComponent,
   },
   {
     path: 'contact-us',
