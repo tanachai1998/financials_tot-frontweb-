@@ -231,7 +231,7 @@
           </p>
           <!-- </div> -->
           <!-- แก้ contact-info ใน style.css จาก 25px -> 5px  และ เพิ่ม width จากที่ไม่ได้กำหนด -> 110% -->
-          <div class="media contact-info">
+          <div class="media contact-info" *ngFor="let item of newsData1; let i = result">
             <!-- <span class="contact-info__icon"><i class="ti-home"></i></span> -->
             <!-- <span
               style="
@@ -251,44 +251,13 @@
             > -->
             <span class="HOT">HOT</span>
             <div class="media-body" style="height: 2%; margin-left: 25%;">
-              <h3>ส่วนงาน1</h3>
-              <p style="margin-bottom: 0%;">Rosemead, CA 91770</p>
+            
+              <!-- <a style="cursor:pointer;" (click) = "goto(data.url)">  -->
+              
+              <h3>{{item.topic}}</h3> 
             </div>
           </div>
-          <div class="media contact-info">
-            <span class="HOT">HOT</span>
-            <!-- <span class="contact-info__icon"><i class="ti-tablet"></i></span> -->
-            <div class="media-body" style="height: 2%; margin-left: 25%;">
-              <h3>ส่วนงาน2</h3>
-              <p style="margin-bottom: 0%;">Mon to Fri 9am to 6pm</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <!-- <span class="contact-info__icon"><i class="ti-email"></i></span> -->
-            <span class="HOT">HOT</span>
-            <!-- <span class="HOT"></span> -->
-            <div class="media-body" style="height: 2%; margin-left: 25%;">
-              <h3>ส่วนงาน3</h3>
-              <p style="margin-bottom: 0%;">Send us your query anytime!</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <!-- <span class="contact-info__icon"><i class="ti-email"></i></span> -->
-            <span class="HOT">HOT</span>
-            <div class="media-body" style="height: 2%; margin-left: 25%;">
-              <h3>ส่วนงาน4</h3>
-              <p style="margin-bottom: 0%;">Send us your query anytime!</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <!-- <span class="contact-info__icon"><i class="ti-email"></i></span> -->
-            <span class="HOT">HOT</span>
-            <!-- <p class="hot"></p> -->
-            <div class="media-body" style="height: 2%; margin-left: 25%;">
-              <h3>ส่วนงาน5</h3>
-              <p style="margin-bottom: 0%;">Send us your query anytime!</p>
-            </div>
-          </div>
+        
         </div>
         <!-- <div style="margin-left: 2%; margin-right: 2%; width: 1%;"> -->
 

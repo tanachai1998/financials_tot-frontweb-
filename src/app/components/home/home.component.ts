@@ -15,7 +15,7 @@ import { NewsAPIserviceService } from 'src/app/services/news-apiservice.service'
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
+  newsData1: any = [];
   newsData: any;
   displayData:any=[];
   loanData: any;
@@ -54,6 +54,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.ServiceSlideApi = this.slideApi.imageObject;
     this.getloan();
+    this.getNews1();
+    
 
     this.getNews();
   }
@@ -74,6 +76,17 @@ export class HomeComponent implements OnInit {
       console.log("news" , this.displayData)
     })
   }
+  getNews1() {
+    this.newsservice.getNews1(1).subscribe(result => {
+      //  for(var i=0 ; i< this.newsdata)
+      this.newsData1 = result
+      console.log("newsdetail", this.newsData1)
+    })
+  }
+
+  
+
+  
   getloan() {
     this.loanbankservice.getLoan().subscribe(results => {
 

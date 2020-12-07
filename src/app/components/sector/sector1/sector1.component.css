@@ -1,7 +1,20 @@
-.im{
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);
-    height:400;
-    width:800;
-    margin-bottom: 20px;
-}
+.HOT {
+    position: absolute;
+    content: "HOT";
+    background: #ff003c;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 10px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 17%;
+    height: 4%;
+  }
+  
+  .loan-api{
+    text-align: center;
+    
+  }
