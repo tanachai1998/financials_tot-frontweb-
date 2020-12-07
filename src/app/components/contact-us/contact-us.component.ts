@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsAPIserviceService } from 'src/app/services/news-apiservice.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -6,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-us.component.css'],
 })
 export class ContactUsComponent implements OnInit {
-  constructor() {}
+  displaynews:any=[];
+  resultnews:any=[];
+  constructor(
+    private newsservice: NewsAPIserviceService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.news();
+  }
 
   headerList = [
     {
@@ -42,4 +49,22 @@ export class ContactUsComponent implements OnInit {
       mail: 'nittayabo@tot.co.th',
     },
   ];
+  news(){
+    this.newsservice.getNews1(1).subscribe(result => {
+      this.resultnews = result
+      console.log("'''",this.resultnews);
+      
+  
+      for(var a = 0; a < 5; a++){
+        // alert(";;;;;")
+      this.displaynews.push({topic: this.resultnews[a].topic, 
+        sector: this.resultnews[a].sector.fullName,
+        image: this.resultnews[a].image
+      })
+      console.log(this.displaynews);
+      
+      
+    }
+    })
+  }
 }

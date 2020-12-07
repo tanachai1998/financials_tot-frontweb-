@@ -32,6 +32,8 @@ import { Infor33Component } from './components/sector/sector3/infor33/infor33.co
 import { SupplierResolver } from './pipes/suppliers.resolver';
 import { DocumentComponent } from './components/document/document.component';
 import { CategoryComponent } from './components/category/category.component';
+import { NewDataComponent } from './components/new-data/new-data.component'
+
 const routes: Routes = [
   {
     path: '',
@@ -157,6 +159,11 @@ const routes: Routes = [
     path:'sector/sector3/info33',
     component:Infor33Component,
   },
+  {
+    path:'newdata/:id',
+    component: NewDataComponent,
+  },
+  
   {
     // หมายถึง page not found back to home page
     path: '**',
