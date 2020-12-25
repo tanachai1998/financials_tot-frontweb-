@@ -44,6 +44,10 @@ import { Infor33Component } from './components/sector/sector3/infor33/infor33.co
 import { SupplierResolver } from './pipes/suppliers.resolver';
 import { DocumentComponent } from './components/document/document.component';
 import { CategoryComponent } from './components/category/category.component';
+import { P5Component } from './components/sector/sector5/p5/p5.component';
+import { HomenewsComponent } from './components/homenews/homenews.component';
+import { Regulation_sec4Component } from './components/sector/sector4/regulation_sec4/regulation_sec4.component';
+import { Regulation_sec5Component } from './components/sector/sector5/regulation_sec5/regulation_sec5.component';
 
 
 
@@ -89,6 +93,11 @@ import { CategoryComponent } from './components/category/category.component';
     Infor33Component,
     DocumentComponent,
     CategoryComponent,
+    P5Component,
+    HomenewsComponent,
+    Regulation_sec4Component,
+    Regulation_sec5Component,
+    
 
 
 

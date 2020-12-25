@@ -15,7 +15,7 @@
     height: 4%;
   }
 </style> -->
-<main>
+<!-- <main> -->
   <!-- slider Area Start -->
   <div class="main-menu" style="text-align: center; margin-top: 40px; color: darkblue;">
     <h1>ฝ่ายการเงิน</h1>
@@ -115,7 +115,7 @@
                     (slide)="onSlide($event)">
                     <ng-template ngbSlide *ngFor="let img of slideApi.imageObject; index as i">
                       <div class="carousel-caption">
-                        <h3>My slide {{ i + 1 }} title</h3>
+                        <!-- <h3>My slide {{ i + 1 }} title</h3> -->
                       </div>
                       <div class="picsum-img-wrapper" style="text-align: center;">
                         <!-- <div style="width: 100%;"> -->
@@ -165,7 +165,7 @@
                           text-align: center;
                           font-size: 15px;
                           text-decoration: none;
-                        " routerLink="/contact-us">| อ่านต่อ |</a>
+                        " routerLink="/homenews">| อ่านต่อ |</a>
                     </li>
                   </ul>
                 </nav>
@@ -447,11 +447,13 @@
         height="400" width="500"/></div> -->
       <div class="loan-api">
         <!-- <div class="row-3"> -->
-        <h2>อัตราดอกเบี้ยสินเชื่อ</h2>
+        <h1>อัตราดอกเบี้ยสินเชื่อ</h1>
         <!-- <div class="latest-area latest-height d-flex align-items-center"> -->
-        <div align="center">
-          <table>
-
+        <!-- <div align="center"> -->
+          <!-- <table> -->
+            <div class="table-wrapper">
+              <table class="fl-table">
+                  <thead>
             <tr>
 
               <!-- <div class="row"> -->
@@ -463,6 +465,8 @@
               <!-- </div> -->
               <!-- </div> -->
             </tr>
+            </thead>
+            <tbody>
             <br>
             
             <tr *ngFor="let data of showData">
@@ -475,16 +479,17 @@
               <td width="15%">{{data.mrr}}</td>
             </tr>
             <br>
+            </tbody>
 
 
 
           </table>
-        </div>
+        <!-- </div> -->
 
         <!-- </div> -->
         <!-- </div> -->
       </div>
     </div>
-  </section>
+  <!-- </section> -->
   <router-outlet></router-outlet>
-</main>
+<!-- </main> -->

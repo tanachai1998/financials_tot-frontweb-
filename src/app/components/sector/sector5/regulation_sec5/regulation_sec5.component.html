@@ -1,0 +1,110 @@
+<main>
+  <div class="main-menu" style="text-align: center; margin-top: 40px; color: darkblue;"></div>
+
+  <div style="text-align: center; border-radius: 10px; box-shadow: black; ">
+      <img src='../../../assets/img/สกง4.png' style="width: 100%;
+    height: auto;
+   max-width:1250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);">
+  </div>
+</main>
+<div>
+  <!-- <div class="row"> -->
+  <div class="line2"></div>
+  <h2 style="text-align: center;">หลักเกณฑ์การคัดเลือกการติดตาม</h2>
+  <div class="line2"></div>
+  
+  <!-- </div> -->
+
+  <!-- <a [routerLink]="['reg5']">การวิเคราะห์โครงการลงทุน</a> -->
+
+
+
+
+  <!-- <div class="line3"></div> -->
+</div>
+
+<section class="contact-section">
+  <div class="container" style="padding-left: 15%; padding-right: 15%;">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="col-12">
+          <p class="contact-title" style="text-align: left; font-size: 20px;">
+            เอกสาร
+          </p>
+        </div>
+        <div class="form-contact contact_form">
+          <!-- action="contact_process.php"
+              method="post"
+              id="contactForm"
+              novalidate="novalidate" -->
+
+          <!-- <div>
+  <h1>peach {{list}}</h1>
+              </div> -->
+          <div class="card-body">
+            <table id="datatables-basic" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>ประเภท</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of resultCategory ; let i = index ">
+                  <td>{{ i + 1 }}</td>
+                  <td class="pointer" (click)="Category(item.id)">{{ item.type }}</td>
+                </tr>
+                <!-- <div
+                        style="
+                          height: 30%;
+                          width: 30%;
+                          background-color: black;
+                          opacity: 40%;
+                          /* margin-top: 4.1%; */
+                          /* padding-top: %; */
+                          margin-left: 10%;
+                        "
+                      ></div> -->
+                <br />
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- binding ใส่ service topic  -->
+<!-- {{regu.topic}} | {{regu.sub}} -->
+<!-- {{item}} -->
+
+<!-- <img
+                      src="../../../assets/img/investment_news.png"
+                      alt=""
+                      style="height: 50%; width: 100%;"
+                    /> -->
+<!-- <div class="col-sm-6"> -->
+<!-- <div style="flex: 0 0 100%; margin: 3%; max-width: 95%;">
+                <div class="form-group" style="background-color: burlywood;">
+                  <span>เนื้อหา</span>
+                </div>
+              </div> -->
+<div class="col-12">
+  <nav style="text-align: center;">
+    <ul id="navigation" style="margin-bottom: 0px;">
+      <li>
+        <a class="contact-title" style="
+                          text-align: center;
+                          font-size: 15px;
+                          text-decoration: none;
+                        " routerLink="/regulation_sec4/order">
+          | เพิ่มเติม |</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<br />
+<br />

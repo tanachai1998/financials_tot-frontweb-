@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { SlideAPIService } from '../../sevices/slide-api.service';
 import { LoanBankAPIService } from 'src/app/services/loan-bank-api.service';
 import { NewsAPIserviceService } from 'src/app/services/news-apiservice.service';
+import { MessageService } from 'src/app/sevices/message.service';
 
 @Component({
   selector: 'app-home',
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
   newsData1: any = [];
   url = "";
   constructor(private router: Router,
+    private messageService: MessageService,
     private loanbankservice: LoanBankAPIService,
     private newsservice: NewsAPIserviceService,
     // @Inject('BASE_URL') baseUrl: string
@@ -57,6 +59,7 @@ export class HomeComponent implements OnInit {
   ];
   ServiceSlideApi: Array<Object> = [];
   ngOnInit(): void {
+    this.messageService.sendMessage('home');
     this.ServiceSlideApi = this.slideApi.imageObject;
     this.getloan();
     this.getNews1();

@@ -32,7 +32,11 @@ import { Infor33Component } from './components/sector/sector3/infor33/infor33.co
 import { SupplierResolver } from './pipes/suppliers.resolver';
 import { DocumentComponent } from './components/document/document.component';
 import { CategoryComponent } from './components/category/category.component';
-import { NewDataComponent } from './components/new-data/new-data.component'
+import { NewDataComponent } from './components/new-data/new-data.component';
+import { P5Component } from './components/sector/sector5/p5/p5.component';
+import { Regulation_sec4Component } from './components/sector/sector4/regulation_sec4/regulation_sec4.component';
+import { Regulation_sec5Component } from './components/sector/sector5/regulation_sec5/regulation_sec5.component';
+import { HomenewsComponent } from './components/homenews/homenews.component';
 
 const routes: Routes = [
   {
@@ -46,6 +50,10 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'homenews',
+    component: HomenewsComponent,
+  },
+  {
     path: 'about-us',
     component: AboutUsComponent,
   },
@@ -54,8 +62,12 @@ const routes: Routes = [
     component: SectorComponent,
   },
   {
-    path: 'regulation/:id',
+    path: 'regulation/1',
     component: RegulationComponent,
+  },
+  {
+    path: 'regulation_sec4/5',
+    component: Regulation_sec4Component,
   },
   {
     path: 'regulation/category/:id',
@@ -85,6 +97,10 @@ const routes: Routes = [
   {
     path: 'sector/sector4',
     component: Sector4Component,
+  },
+  {
+    path: 'regulation/4',
+    component: RegulationComponent,
   },
   {
     path: 'sector/sector5',
@@ -162,6 +178,30 @@ const routes: Routes = [
   {
     path:'newdata/:id',
     component: NewDataComponent,
+  },
+  {
+    path:'sector/sector5/contact-sector5',
+    component: ContactSector5Component  ,
+  },
+  {
+    path:'sector/sector5/about5',
+    component: About5Component,
+  },
+  {
+    path:'sector/sector5/p5',
+    component: P5Component,
+  },
+  {
+    path:'sector/sector5/p5/reg5/6',
+    component: Reg5Component,
+  },
+  {
+    path:'sector/sector5/regulation_sec5/6',
+    component: Regulation_sec5Component,
+  },
+  {
+    path:'regulation/reg-content',
+    component: RegContentComponent,
   },
   
   {
