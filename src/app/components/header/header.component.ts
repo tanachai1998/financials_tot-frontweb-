@@ -14,34 +14,34 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   nav = [
     {
-      name: "sector1",
+      name: "home",
       data: [
         {
           name: 'หน้าแรก',
-          url: 'home',
+          url: '/home',
           style: "text-decoration: none;"
         },
         {
           name: 'เกี่ยวกับเรา',
-          url: 'about-us',
+          url: '/about-us',
           style: "text-decoration: none;"
 
         },
         {
           name: 'ส่วนงาน',
-          url: 'sector',
+          url: '/sector',
           style: "text-decoration: none;"
 
         },
         {
           name: 'คำสั่ง/ระเบียบ',
-          url: 'regulation',
+          url: '/regulation/1',
           style: "text-decoration: none;"
 
         },
         {
           name: 'ติดต่อเรา',
-          url: 'contact-us',
+          url: '/contact-us',
           style: "text-decoration: none;"
 
         },
@@ -49,10 +49,85 @@ export class HeaderComponent implements OnInit, OnDestroy {
       ]
     },
     {
-      name: 'sector2',
+      name: "sector1",
       data: [
         {
-          name: 'หน้าแรก2',
+          name: 'หน้าแรก',
+          url: '/home',
+          style: "text-decoration: none;"
+        },
+        {
+          name: 'เกี่ยวกับเรา',
+          url: '/about-us',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'การจัดทำงบประมาณ',
+          url: '/sector/sector1/information1',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'โครงสร้างส่วนงาน',
+          url: '/sector/sector1/about-us-sec1',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'ติดต่อเรา',
+          url: '/contact-us',
+          style: "text-decoration: none;"
+
+        },
+
+      ]
+    },
+    {
+      name: "sector2",
+      data: [
+        {
+          name: 'หน้าแรก',
+          url: '/home',
+          style: "text-decoration: none;"
+        },
+        {
+          name: 'ข้อมูลงบการเงิน',
+          url: '/sector/sector2/inforsec2',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'ตัวชี้วัดองค์กร',
+          url: '/sector/sector2/metricsec2',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'รายงานและวิเคราะห์ ',
+          url: '/sector/sector2/reportsec2',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'โครงสร้างส่วนงาน ',
+          url: '/sector/sector2/about2',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'ติดต่อเรา',
+          url: '/contact-us',
+          style: "text-decoration: none;"
+
+        },
+      ]
+    },
+    {
+      name: 'sector3',
+      data: [
+        {
+          name: 'หน้าแรก',
           url: '',
           style: "text-decoration: none;"
         },
@@ -63,62 +138,117 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
         },
         {
-          name: 'ส่วนงาน',
-          url: 'sector',
+          name: 'ศูนย์จัดทำงบประมาณทำการ',
+          url: '/sector/sector3/info31',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'ศูนย์บริหารงบประมาณทำการที่1และ2',
+          url: '/sector/sector3/info32',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'รายงานการใช้งบประมาณ',
+          url: '/sector/sector3/info33',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'โครงสร้างส่วนงาน',
+          url: '/sector/sector3/about-sec3',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'ติดต่อเรา',
+          url: '/contact-us',
+          style: "text-decoration: none;"
+
+        },
+        
+      ]
+    },
+    {
+      name: 'sector4',
+      data: [
+        {
+          name: 'หน้าแรก',
+          url: '/home',
+          style: "text-decoration: none;"
+        },
+        {
+          name: 'เกี่ยวกับเรา',
+          url: '/about-us',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'โครงสร้างส่วนงาน',
+          url: '/sector/sector4/about4',
           style: "text-decoration: none;"
 
         },
         {
           name: 'คำสั่ง/ระเบียบ',
-          url: 'regulation',
+          url: '/regulation_sec4/5',
           style: "text-decoration: none;"
 
         },
-        // {
-        //   name:'ติดต่อเรา',
-        //   url:'contact-us',
-        //   style :"text-decoration: none;"
+        {
+          name: 'ติดต่อเรา',
+          url: '/contact-us',
+          style: "text-decoration: none;"
 
-        // },
+        },
+      ]
+    },
+    {
+      name: 'sector5',
+      data: [
+        {
+          name: 'หน้าแรก',
+          url: '/home',
+          style: "text-decoration: none;"
+        },
+        {
+          name: 'เกี่ยวกับเรา',
+          url: '/about-us',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'วิเคราะห์ความคุ้มค่าการลงทุน',
+          url: '/sector/sector5/p5',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'ติดตามและประเมินผลการลงทุน',
+          url: '/sector/sector5/regulation_sec5/6',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'โครงสร้างส่วนงาน',
+          url: '/sector/sector5/about5',
+          style: "text-decoration: none;"
+
+        },
+        {
+          name: 'ติดต่อเรา',
+          url: '/contact-us',
+          style: "text-decoration: none;"
+
+        },
 
       ]
-    }
+    },
   ]
-  // navsector1 = [
-  //   {
-  //     name: 'หน้าแรกd',
-  //     url: '',
-  //     style: "text-decoration: none;"
-  //   },
-  //   {
-  //     name: 'เกี่ยวกับเรา',
-  //     url: 'about-us',
-  //     style: "text-decoration: none;"
-
-  //   },
-  //   {
-  //     name: 'ส่วนงาน',
-  //     url: 'sector',
-  //     style: "text-decoration: none;"
-
-  //   },
-  //   {
-  //     name: 'คำสั่ง/ระเบียบ',
-  //     url: 'regulation',
-  //     style: "text-decoration: none;"
-
-  //   },
-  //   {
-  //     name: 'ติดต่อเรา',
-  //     url: 'contact-us',
-  //     style: "text-decoration: none;"
-
-  //   },
-
-  // ]
   navsector1 = [
     {
-      name: 'หน้าแรกD',
+      name: 'หน้าแรก',
       url: '',
       style: "text-decoration: none;"
     },
@@ -136,17 +266,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
     {
       name: 'คำสั่ง/ระเบียบ',
-      url: 'regulation',
+      url: 'regulation/1',
       style: "text-decoration: none;"
 
     },
-    // {
-    //   name:'ติดต่อเรา',
-    //   url:'contact-us',
-    //   style :"text-decoration: none;"
+    {
+      name: 'ติดต่อเรา',
+      url: '/contact-us',
+      style: "text-decoration: none;"
 
-    // },
-
+    },
   ]
   new_nav: any[] = []
   page_name: string;
@@ -162,12 +291,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.subscription = this.messageService.getMessage().subscribe(name_nav => {
       console.log('name_nav', name_nav, this.router.url.replace('/', ''));
       let url = this.router.url.replace('/', '')
-      if (name_nav ) {
+      if (name_nav && this.nav.find(res => res.name == name_nav.navname) ) {
         this.new_nav = this.nav.find(res => res.name == name_nav.navname).data
       } else {
         // clear messages when empty message received
 
-        this.new_nav = this.navsector1
+        this.new_nav = this.nav[0].data
       }
     });
   }

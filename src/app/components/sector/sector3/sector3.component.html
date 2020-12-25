@@ -1,106 +1,515 @@
-<div class="mt-4">
-    <div style="text-align: center;">
-        <h1>ส่วนงบประมาณทำการ</h1>
-    </div>
+<div class="main-menu" style="text-align: center; margin-top: 40px; color: darkblue;">
+  <h1>ส่วนงบประมาณทำการ(ทกง.)</h1>
 </div>
-<br>
-<div style="text-align: center; border-radius: 10px; box-shadow: black; ">
-    <img src='../../../assets/img/ทกง.png' style="width: 100%;
-                height: auto;
-                max-height: 400px;
-               max-width:1440px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);" />
-</div>
-
-<div class="row justify-content-center">
-    <div class="col-xs-12">
-        <div class="ml-4">
-            <div class="mt-4">
-                <div style=" max-width: 900px;">
-                    <p>บริหารและกำกับดูแลการใช้งบทำการประจำปี ของทุกส่วนงาน
-                        และภาพรวมของบริษัทรวมทั้งพิจารณาจัดสรรงบสำรอง/การโอนงบทำการระหว่างส่วนงานต่างๆให้สอดคล้องกับยุทธศาสตร์แผนธุรกิจและแผนปฏิบัติการภายใต้กรอบงบประมาณทำการในภาพรวมของบริษัท
-                    </p>
-                </div>
+<!-- <style>
+  .HOT {
+    position: absolute;
+    content: "HOT";
+    background: #ff003c;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 10px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 17%;
+    height: 4%;
+  }
+</style> -->
+<!-- <main> -->
+    <!-- slider Area Start -->
+  
+    <div class="slider-area">
+      <!-- Mobile Menu -->
+      <!-- <div class="slider-active">
+        <div
+          class="single-slider slider-height"
+          data-background="src/app/assets/estore/img/hero/h1_hero.jpg"
+        > -->
+      <div class="container">
+        <!-- <div class="row d-flex align-items-center justify-content-between">
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
+                              <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
+                                  <img src="../../../assets/estore/img/hero/hero_man.png" alt="">
+                              </div>
+                          </div> -->
+        <!-- <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
+                              <div class="hero__caption">
+                                  <span data-animation="fadeInRight" data-delay=".4s">60% Discount</span>
+                                  <h1 data-animation="fadeInRight" data-delay=".6s">Winter <br> Collection</h1>
+                                  <p data-animation="fadeInRight" data-delay=".8s">Best Cloth Collection By 2020!</p> -->
+        <!-- Hero-btn -->
+        <!-- <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
+                                      <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> -->
+        <!-- style="width: 100%;" -->
+        <ngb-carousel style="width: 100%;" #carousel [interval]="4000" [pauseOnHover]="pauseOnHover"
+          (slide)="onSlide($event)">
+          <!-- <ng-template ngbSlide *ngFor="let img of images; index as i"> -->
+          <ng-template ngbSlide *ngFor="let img of slideApi.imageObject3; index as i">
+            <!-- <ng-template ngbSlide *ngFor="let img of ServiceSlideApi; index as i"> -->
+  
+  
+            <div class="carousel-caption">
+              <!-- <h3>My slide {{ i + 1 }} title</h3> -->
             </div>
-        </div>
+            <!-- <a routerLink = "img.no"></a> -->
+  
+            <!-- {{img.goTolink}} -->
+  
+            <!-- <a
+              href="../../../assets/img/1.png"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+            > -->
+            <div class="picsum-img-wrapper" style="text-align: center;">
+              <!-- <div style="width: 100%;"> -->
+              <!-- <nav> -->
+              <nav>
+                <!-- style="width: 100%; height: fit-content;" -->
+  
+                <img style="width:100%; height:400px" [src]="img.pic" (click)="onClickonSlide(img.goTolink)" />
+                <!-- <a routerLink = "/regulation"></a> -->
+              </nav>
+              <!-- [src]="img.link" -->
+  
+              <!-- <routerLink="/{{ link }}"></routerLink> -->
+              <!-- (click)="onClickonSlide()" -->
+              <!-- </nav> -->
+            </div>
+            <!-- alt="My image {{ i + 1 }} description" -->
+            <!-- </a> -->
+          </ng-template>
+        </ngb-carousel>
+      </div>
+      <!-- </div> -->
+      <!-- </div> -->
     </div>
-</div>
-<br>
-<br>
-<!-- <div class="single-cap active">
+    <!-- slider Area End-->
+    <!-- แก้ .contact-section ใน assets/style.css เป็น padding-top: 50px;  -->
+    <!-- เอามาจาก contact.html -->
+    <section class="contact-section">
+      <div class="container" style="padding-left: 15%; padding-right: 15%;">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="col-12">
+              <p class="contact-title" style="text-align: center; font-size: 20px;">
+                ข่าวสาร
+              </p>
+            </div>
+            <div style="text-align: center; border-radius: 10px; box-shadow: black; ">
+                <img src='../../../assets/img/ทกง.png' style="width: 100%;
+                            height: auto;
+                            max-height: 400px;
+                            max-width:1440px;
+                            border-radius: 10px;
+                            box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);" />
+            </div>
+            <div class="form-contact contact_form">
+              <!-- action="contact_process.php"
+              method="post"
+              id="contactForm"
+              novalidate="novalidate" -->
+              <div class="row">
+                <!-- <div class="col-12"> -->
+                  <!-- <div class="form-group"> -->
+  
+                    <!-- <ngb-carousel style="width: 100%;" #carousel [interval]="4000" [pauseOnHover]="pauseOnHover" -->
+                      <!-- (slide)="onSlide($event)"> -->
+                      <!-- <ng-template ngbSlide *ngFor="let img of slideApi.imageObject; index as i"> -->
+                        <!-- <div class="carousel-caption"> -->
+                          <!-- <h3>My slide {{ i + 1 }} title</h3> -->
+                        <!-- </div> -->
+                        <!-- <div class="picsum-img-wrapper" style="text-align: center;"> -->
+                          <!-- <div style="width: 100%;"> -->
+                          <!-- <nav> -->
+                          <!-- <nav> -->
+                            <!-- style="width: 100%; height: fit-content;" -->
+  
+                            <!-- <img style="width:100%; height:250px;" [src]="img.pic" -->
+                              <!-- (click)="onClickonSlide(img.goTolink)" /> -->
+                            <!-- <a routerLink = "/regulation"></a> -->
+                          <!-- </nav> -->
+                        <!-- </div> -->
+                      <!-- </ng-template> -->
+                    <!-- </ngb-carousel> -->
+  
+  
+                  <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-sm-6"> -->
+                <div style="flex: 0 0 100%; margin: 3%; max-width: 95%;">
+                  <div class="form-group" style="background-color: burlywood;">
+                    <span>เนื้อหา</span>
+                    <!-- <input
+                      class="form-control valid"
+                      name="name"
+                      id="name"
+                      type="text"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Enter your name'"
+                      placeholder="Enter your name"
+                    /> -->
+                  </div>
+                  <p>บริหารและกำกับดูแลการใช้งบทำการประจำปี ของทุกส่วนงาน
+                    และภาพรวมของบริษัทรวมทั้งพิจารณาจัดสรรงบสำรอง/การโอนงบทำการระหว่างส่วนงานต่างๆให้สอดคล้องกับยุทธศาสตร์แผนธุรกิจ
+                    และแผนปฏิบัติการภายใต้กรอบงบประมาณทำการในภาพรวมของบริษัท
+                </p>
+                
+                </div>
+                <div class="col-12">
+                  <!-- <button onclick=""
+                    class="contact-title"
+                    style="text-align: center; font-size: 15px;"
+                  >
+                  |
+                    อ่านต่อ
+                  |
+                </button> -->
+                  <nav style="text-align: center;">
+                    <ul id="navigation" style="margin-bottom: 0px;">
+                      <li>
+                        <a class="contact-title" style="
+                            text-align: center;
+                            font-size: 15px;
+                            text-decoration: none;
+                          " routerLink="/homenews">| อ่านต่อ |</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                
+                <!-- <div class="col-sm-6">
+                  <div class="form-group">
+                    <input
+                      class="form-control valid"
+                      name="email"
+                      id="email"
+                      type="email"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Enter email address'"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div> -->
+                <!-- <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="subject"
+                      id="subject"
+                      type="text"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Enter Subject'"
+                      placeholder="Enter Subject"
+                    />
+                  </div>
+                </div> -->
+              </div>
+              <!-- <div class="form-group mt-3">
+                <button type="submit" class="button button-contactForm boxed-btn">
+                  Send
+                </button>
+              </div> -->
+            </div>
+            <!-- <div class="single-cap active">
     <h4>ส่วนงบประมาณทำการ</h4>
 </div> -->
 
-<div class="row justify-content-sm-center">
-
-    <div class="col-3">
-
-        <div class="rounded-circle" style="background-color: pink; max-width: 250px; max-height: 600px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);">
-
-            <h2 style="text-align: center;">ศูนย์จัดทำ<br>งบประมาณ<br>ทำการ</h2>
+            <!-- <div
+              style="
+                height: 0.15%;
+                width: 153%;
+                background-color: black;
+                opacity: 40%;
+                margin-top: 5%;
+              "
+            ></div> -->
+          </div>
+    
+          <!-- เส้นแบ่ง ระหว่าง content กับ ข่าวล่าสุด -->
+          <div style="margin-top: 5%; margin-left: 2%; margin-right: 2%; width: 1%;">
+            <div style="
+                height: 80%;
+                width: 3%;
+                background-color: black;
+                opacity: 40%;
+              "></div>
+          </div>
+          
+          <!-- ข่าวล่าสุด ใส่ api -->
+          <div class="col-lg-3 offset-lg-1" style="margin-left: 1%;">
+            <!-- <div> -->
+            <p class="contact-title" style="text-align: center; font-size: 20px; margin-bottom: 10px;">
+              ข่าวล่าสุด
+            </p>
+            <!-- </div> -->
+            <!-- แก้ contact-info ใน style.css จาก 25px -> 5px  และ เพิ่ม width จากที่ไม่ได้กำหนด -> 110% -->
+            <div class="media contact-info" *ngFor="let item of newsData1; let i = result">
+              <!-- <span class="contact-info__icon"><i class="ti-home"></i></span> -->
+              <!-- <span
+                style="
+                  position: absolute;
+                  content: 'HOT';
+                  background: #ff003c;
+                  color: #fff;
+                  text-align: center;
+                  border-radius: 8px;
+                  font-size: 10px;
+                  padding: 3px 8px;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  font-weight: 500;
+                "
+                >HOT</span
+              > -->
+              <span class="HOT">HOT</span>
+              <div class="media-body" style="height: 2%; margin-left: 25%;">
+                <a style="cursor: pointer;" (click)="gotonewdata(item.id)"> {{ item.topic }}
+                  </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div style="margin-left: 2%; margin-right: 2%; width: 1%;"> -->
+  
+          <!-- </div> -->
         </div>
-
-    </div>
-    <div class="col-5" style="background-color:white;border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);">
-        <a [routerLink]="['./info31']">
-            <h4>
-                <li>หลักเกณฑ์การจัดทำงบประมาณ</li>
-            </h4>
-            <h4>
-                <li>คู่มือการจัดทำงบประมาณ</li>
-            </h4>
-            <h4>
-                <li>คำสั่งจัดทำงบประมาณ</li>
-            </h4>
-        </a>
-    </div>
-</div>
-<!-- </div> -->
-<br>
-<hr width="90%" />
-<br>
-<div class="row justify-content-sm-center">
-    <div class="col-3">
-        <!-- <div class="p-5"> -->
-        <div class="rounded-circle" style="background-color: green; max-width: 250px; max-height: 550px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);">
-            <h3 style="text-align: center;">ศูนย์บริหาร<br>งบประมาณ<br>ทำการที่ 1<br>และ 2</h3>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div style="
+              height: 1.7%;
+              width: 80%;
+              background-color: black;
+              opacity: 40%;
+              margin-top: 4.1%;
+              /* padding-top: %; */
+              margin-left: 10%;
+            "></div>
         </div>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="container" style="padding-left: 15%; padding-right: 15%;">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="col-12">
+              <p class="contact-title" style="text-align: center; font-size: 20px;">
+                ข่าวสาร
+              </p>
+            </div>
+            <div class="form-contact contact_form">
+              <!-- action="contact_process.php"
+              method="post"
+              id="contactForm"
+              novalidate="novalidate" -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <!-- <textarea
+                      class="form-control w-100"
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="9"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Enter Message'"
+                      placeholder=" Enter Message"
+                    ></textarea> -->
+                    <!-- <a href=""></a> -->
+                    <a href={{displayData[0].url}}>
+                    <img [src]="displayData[0].urlToImage" alt="" style="height: 50%; width: 100%;" />
+                  </a>
+                  <br>
+                  <br>
+                    <a href={{displayData[0].url}}>
+                    {{displayData[0].title}}</a>
+                  <br>
+                    {{displayData[0].description}}
+                  </div>
+                </div>
+                <!-- <div class="col-sm-6"> -->
+                <!-- <div style="flex: 0 0 100%; margin: 3%; max-width: 95%;">
+                  <div class="form-group" style="background-color: burlywood;">
+  
+                    <span></span>
+                    
+                  </div>
+                </div> -->
+                <div class="col-12">
+                  
+                  <nav style="text-align: center;">
+                    <ul id="navigation" style="margin-bottom: 0px;">
+                      <li>
+                        <a a href={{displayData[0].url}}>| อ่านต่อ |</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- <div class="col-sm-6">
+                  <div class="form-group">
+                    <input
+                      class="form-control valid"
+                      name="email"
+                      id="email"
+                      type="email"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Enter email address'"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div> -->
+                <!-- <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="subject"
+                      id="subject"
+                      type="text"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Enter Subject'"
+                      placeholder="Enter Subject"
+                    />
+                  </div>
+                </div> -->
+              </div>
+  
+              <!-- <div class="form-group mt-3">
+                <button type="submit" class="button button-contactForm boxed-btn">
+                  Send
+                </button>
+              </div> -->
+            </div>
+            <!-- <div
+              style="
+                height: 0.15%;
+                width: 153%;
+                background-color: black;
+                opacity: 40%;
+                margin-top: 5%;
+              "
+            ></div> -->
+          </div>
+          <!-- เส้นแบ่ง ระหว่าง content กับ ข่าวล่าสุด -->
+          <div style="margin-top: 5%; margin-left: 2%; margin-right: 2%; width: 1%;">
+            <div style="
+                height: 80%;
+                width: 3%;
+                background-color: black;
+                opacity: 40%;
+              "></div>
+          </div>
+          <!-- ข่าวล่าสุด ใส่ api -->
+          <div class="col-lg-3 offset-lg-1" style="margin-left: 1%;">
+            <!-- <div> -->
+            <p class="contact-title" style="text-align: center; font-size: 20px; margin-bottom: 10px;">
+              ข่าวล่าสุด
+            </p>
+            <!-- </div> -->
+            <!-- แก้ contact-info ใน style.css จาก 25px -> 5px  และ เพิ่ม width จากที่ไม่ได้กำหนด -> 110% -->
+            <div class="media contact-info" *ngFor="let data of displayData">
+              <!-- <span class="contact-info__icon"><i class="ti-home"></i></span> -->
+              <!-- <span
+                style="
+                  position: absolute;
+                  content: 'HOT';
+                  background: #ff003c;
+                  color: #fff;
+                  text-align: center;
+                  border-radius: 8px;
+                  font-size: 10px;
+                  padding: 3px 8px;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  font-weight: 500;
+                "
+                >HOT</span
+              > -->
+              <span class="HOT">HOT</span>
+              <div class="media-body" style="height: 2%; margin-left: 25%;">
+              
+                <a style="cursor:pointer;" (click) = "goto(data.url)"> 
+                
+              <h3>{{data.title}}</h3></a>
+                
+                <br>
+              </div>
+            </div>
+          </div>
+          <!-- <div style="margin-left: 2%; margin-right: 2%; width: 1%;"> -->
+  
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div style="
+              height: 1.7%;
+              width: 80%;
+              background-color: black;
+              opacity: 40%;
+              margin-top: 4.1%;
+              /* padding-top: %; */
+              margin-left: 10%;
+            "></div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div>
+        <!-- <div> <img src='../../../assets/img/loan.png'
+          height="400" width="500"/></div> -->
+        <div class="loan-api">
+          <!-- <div class="row-3"> -->
+          <h1>อัตราดอกเบี้ยสินเชื่อ</h1>
+          <!-- <div class="latest-area latest-height d-flex align-items-center"> -->
+          <!-- <div align="center"> -->
+          <!-- <table> -->
+            <div class="table-wrapper">
+              <table class="fl-table">
+                  <thead>
+            <tr>
+
+              <!-- <div class="row"> -->
+              <th></th>
+              <th>ธนาคาร</th>
+              <th>MOR</th>
+              <th>MLR</th>
+              <th>MRR</th>
+              <!-- </div> -->
+              <!-- </div> -->
+            </tr>
+            </thead>
+            <tbody>
+            <br>
+            
+            <tr *ngFor="let data of showData">
+              
+              <td><img [src]="data.picName" height="60px" width="60px" /></td>
+              
+           <td width="25%">{{data.name}}</td>
+              <td width="15%">{{data.mor}}</td>
+              <td width="15%">{{data.mlr}}</td>
+              <td width="15%">{{data.mrr}}</td>
+            </tr>
+            <br>
+            </tbody>
+
+
+
+          </table>
         <!-- </div> -->
+
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
     </div>
-
-    <div class="col-4" style="background-color: white;border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);">
-        <a [routerLink]="['./info32']">
-            <h4>
-                <li>ความรู้ทั่วไปเกี่ยวกับการใช้งบทำการ </li>
-            </h4>
-            <h4>
-                <li>คำสั่งที่เกี่ยวข้อง</li>
-            </h4>
-            <h4>
-                <li>แบบคำขอดำเนินการด้านงบประมาณ</li>
-            </h4>
-        </a>
-    </div>
-
-</div>
-<br>
-<hr width="90%" style="height:1px;border-width:0;color:lightgray;background-color:lightgray">
-<br>
-
-<div class="row justify-content-center">
-    <div class="col-sm-3" style="background-color: white;border-radius: 20px;   
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);">
-        <div class="btn hero-btn" data-animation="fadeInright" data-delay="1s">
-            <a [routerLink]="['./info33']">
-                <h3>รายงานการใช้งบประมาณ</h3>
-            </a>
-        </div>
-    </div>
-</div>
-
-<a [routerLink]="['./about-sec3']">ส่วนงบประมาณทำการ (ทกง.)</a>
+  <!-- </section> -->
+  <router-outlet></router-outlet>
+<!-- </main> -->
+ 

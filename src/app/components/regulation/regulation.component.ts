@@ -20,7 +20,7 @@ export class RegulationComponent implements OnInit {
     this.storeCategory();
   }
     storeCategory() {
-      this.newsservice.getCategorydata(this.id).subscribe(result => {
+      this.newsservice.getCategorydata(1).subscribe(result => {
         this.resultCategory = result
         console.log(this.resultCategory)
       })

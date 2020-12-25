@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NewsAPIserviceService } from 'src/app/services/news-apiservice.service';
+import { MessageService } from 'src/app/sevices/message.service';
 
 @Component({
   selector: 'app-new-data',
@@ -11,6 +12,7 @@ export class NewDataComponent implements OnInit {
   newsInfo: any;
   id: any;
   constructor(
+    private messageService: MessageService,
     private apiGetData: NewsAPIserviceService,
     private activatedRoute: ActivatedRoute,
   ) {
@@ -19,6 +21,7 @@ export class NewDataComponent implements OnInit {
 
   ngOnInit() {
     // alert(this.id)
+    this.messageService.sendMessage('');
     this.getNewsInfo();
   }
 

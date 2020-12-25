@@ -37,7 +37,7 @@ export class CategoryComponent implements OnInit {
   }
 
   new1() {
-    this.newsservice.getNews1().subscribe(result => {
+    this.newsservice.getNews1(1).subscribe(result => {
       this.resultNews = result
       console.log(this.resultNews);
 
